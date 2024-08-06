@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/form-wizard/static/css/main.dd1ea7b7.css",
+    "main.js": "/form-wizard/static/js/main.bde41e35.js",
+    "index.html": "/form-wizard/index.html",
+    "static/media/custom.less": "/form-wizard/static/media/custom.31d6cfe0d16ae931b73c.less",
+    "main.dd1ea7b7.css.map": "/form-wizard/static/css/main.dd1ea7b7.css.map",
+    "main.bde41e35.js.map": "/form-wizard/static/js/main.bde41e35.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dd1ea7b7.css",
+    "static/js/main.bde41e35.js"
+  ]
+}
