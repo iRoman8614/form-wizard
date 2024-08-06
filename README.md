@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Form Wizard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Описание
 
-## Available Scripts
+Этот проект представляет собой одностраничное приложение (SPA) с тремя последовательными формами для сбора данных пользователя. Приложение реализовано на React с использованием React Router, Context API и Ant Design для стилизации.
 
-In the project directory, you can run:
+## Функциональность
 
-### `npm start`
+1. **Форма 1: Личные данные** - Сбор контактных данных пользователя (телефон, имя, фамилия, пол).
+2. **Форма 2: Адрес и место работы** - Ввод адреса проживания и выбор места работы.
+3. **Форма 3: Параметры займа** - Выбор суммы займа и срока.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Все формы защищены: нельзя перейти на форму 2, не заполнив форму 1, и на форму 3, не заполнив форму 2. После заполнения формы 3 данные отправляются на сервер, и отображается модальное окно с результатом.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Технологии
 
-### `npm test`
+- **React**
+- **React Router**
+- **Context API**
+- **Ant Design**
+- **TypeScript**
+- **GitHub Pages**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Как запустить проект локально
 
-### `npm run build`
+1. Клонируйте репозиторий:
+```
+git git clone https://github.com/iRoman8614/form-wizard.git
+```
+2. Перейдите в директорию проекта:
+```
+cd form-wizard
+```
+3. Установите зависимости:
+```
+npm install
+```
+4. Запустите проект:
+```
+npm start
+```
+Приложение будет доступно по адресу http://localhost:3000.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Деплой на GitHub Pages
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Проект доступен по адресу: https://iRoman8614.github.io/form-wizard

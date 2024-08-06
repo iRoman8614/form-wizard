@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Form1 from './components/Form1';
+import Form2 from './components/Form2';
+import Form3 from './components/Form3';
+import { useFormContext } from './context/FormContext';
+import ProtectedRoute from './components/ProtectedRoute';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    const { form1Completed, form2Completed } = useFormContext();
+
+    return (
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/form1" element={<Form1 />} />
+            <Route
+                path="/form2"
+                element={<ProtectedRoute
+                    component={Form2}
+                    pathToRedirect="/form1"
+                    condition={form1Completed}
+                />}
+            />
+            <Route
+                path="/form3"
+                element={<ProtectedRoute
+                    component={Form3}
+                    pathToRedirect={form2Completed ? "/form2" : "/form1"}
+                    condition={form1Completed && form2Completed}
+                />}
+            />
+        </Routes>
+    );
+};
 
 export default App;
